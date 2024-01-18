@@ -2,7 +2,7 @@ var express = require("express");
 
 const { Sequelize, Op, Model, DataTypes } = require("sequelize");
 
-const sequelize = new Sequelize('school_king', 'root', 'root', {
+const sequelize = new Sequelize('school_king', 'admin', 'admin', {
   host: '127.0.0.1',
   dialect: 'mysql'
 });
