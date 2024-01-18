@@ -4,7 +4,6 @@ const sequelize = new Sequelize("mysql::memory:");
 // const Card = require(path.join(__dirname, './card'))(sequelize, Sequelize.DataTypes);
 
 // const Card = card(sequelize, Sequelize.DataTypes)
-
 module.exports = (sequelize, DataTypes) => {
     const Type = sequelize.define(
         "Type",
@@ -13,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
             name: DataTypes.STRING,
         },
         {
+            timestamps: false,
             // Other model options go here
         }
     );

@@ -1,6 +1,3 @@
-const { Sequelize, DataTypes } = require("sequelize");
-const sequelize = new Sequelize("mysql::memory:");
-
 module.exports = (sequelize, DataTypes) => {
     const Status = sequelize.define(
         "Status",
@@ -9,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             name: DataTypes.STRING,
         },
         {
+            timestamps: false,
             // Other model options go here
         }
     );
